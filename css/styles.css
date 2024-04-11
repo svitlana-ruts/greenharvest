@@ -1,7 +1,7 @@
 body {
   font-family: 'Inter Tight', sans-serif;
   color: #fbfbfb;
-  background-color: aqua;
+  background-color: #576f35;
 }
 
 h1,
@@ -30,5 +30,35 @@ ol {
 .container {
   max-width: 320px;
   padding: 0 20px;
-  margin: 0 auto;
+}
+/*============================*/
+
+.hero {
+  background-color: #576f35;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  padding: 100px 0px 0px 0px;
+}
+
+.hero-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 335px;
+}
+
+.hero-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #fbfbfb;
+  text-align: left;
+  max-width: 335px;
+  margin-bottom: 40px;
 }
