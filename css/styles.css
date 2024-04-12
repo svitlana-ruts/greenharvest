@@ -30,15 +30,36 @@ ol {
 .container {
   max-width: 320px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 /*============================*/
 
 .hero {
   background-color: #576f35;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
   padding: 100px 0px 0px 0px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-fone {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 20, 20, 0.2),
+      rgba(20, 20, 20, 0.2)
+    ),
+    url(../images/hero-img-mob-1x.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 370px;
+  background-position: 50% 100%;
+  position: relative;
 }
 
 .hero-title {
@@ -48,7 +69,6 @@ ol {
   letter-spacing: -0.01em;
   text-transform: uppercase;
   color: #fbfbfb;
-  margin-bottom: 20px;
   text-align: left;
   max-width: 335px;
 }
@@ -60,5 +80,4 @@ ol {
   color: #fbfbfb;
   text-align: left;
   max-width: 335px;
-  margin-bottom: 40px;
 }
