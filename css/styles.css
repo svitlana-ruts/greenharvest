@@ -51,10 +51,10 @@ img {
   justify-content: center;
   align-items: baseline;
   gap: 40px;
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     rgba(20, 20, 20, 0.2),
     rgba(20, 20, 20, 0.2)
-  ); */
+  );
 }
 
 .hero-title-container {
@@ -84,12 +84,7 @@ img {
 .hero-fone {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(20, 20, 20, 0.2),
-      rgba(20, 20, 20, 0.2)
-    ),
-    url(../images/hero-img-mob-1x.jpg);
+  background-image: url(../images/hero-img-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
@@ -99,12 +94,7 @@ img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero-fone {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(20, 20, 20, 0.2),
-        rgba(20, 20, 20, 0.2)
-      ),
-      url(../images/hero-img-mob-2x.jpg);
+    background-image: url(../images/hero-img-mob-2x.jpg);
   }
 }
 
@@ -146,24 +136,14 @@ img {
   }
 
   .hero-fone {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(20, 20, 20, 0.2),
-        rgba(20, 20, 20, 0.2)
-      ),
-      url(../images/hero-img-tab-1x.jpg);
+    background-image: url(../images/hero-img-tab-1x.jpg);
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero-fone {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(20, 20, 20, 0.2),
-          rgba(20, 20, 20, 0.2)
-        ),
-        url(../images/hero-img-tab-2x.jpg);
+      background-image: url(../images/hero-img-tab-2x.jpg);
     }
   }
 }
@@ -179,8 +159,10 @@ img {
   .hero {
     padding: 0px 0px 0px 0px;
     flex-wrap: nowrap;
+    display: flex;
     align-items: flex-end;
     justify-content: center;
+    flex-direction: row;
     gap: 28px;
   }
 
@@ -190,11 +172,9 @@ img {
 
   .hero-title-container {
     padding: 0px 0px 50px 0px;
-    gap: 128px;
     max-width: 502px;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    gap: 128px;
   }
 
   .hero-title {
@@ -207,28 +187,76 @@ img {
   }
 
   .hero-fone {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(20, 20, 20, 0.2),
-        rgba(20, 20, 20, 0.2)
-      ),
-      url(../images/hero-img-dt-1x.jpg);
-    background-position: left bottom;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    max-width: 650px;
+    background-image: url(../images/hero-img-dt-1x.jpg);
+    background-position: bottom left;
+    background-size: auto;
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero-fone {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(20, 20, 20, 0.2),
-          rgba(20, 20, 20, 0.2)
-        ),
-        url(../images/hero-img-dt-2x.jpg);
+      background-image: url(../images/hero-img-dt-2x.jpg);
     }
   }
+}
+
+/*=========exsemple 2========*/
+
+/* .hero-two {
+  background: #576f35;
+  padding: 100px 0px 0px 0px;
+  max-width: 375px;
+  max-height: 712px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 20, 20, 0.2),
+      rgba(20, 20, 20, 0.2)
+    ),
+    url(../images/hero-img-mob-1x.jpg);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+} */
+
+.hero-two {
+  padding: 100px 0px 0px 0px;
+  background: #576f35;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 20, 20, 0.2),
+      rgba(20, 20, 20, 0.2)
+    ),
+    url(../images/hero-img-mob-1x.jpg);
+  /* max-width: 375px; */
+  height: 712px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+  /* min-height: 100vh; */
+  width: 100%;
+}
+
+.container {
+  /* padding: 100px 20px 0px 20px; */
+}
+
+.hero-title-two {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  margin-bottom: 25px;
+}
+
+.hero-text-two {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  color: #fbfbfb;
+  margin-bottom: 40px;
 }
