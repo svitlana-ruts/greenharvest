@@ -51,11 +51,10 @@ img {
   justify-content: center;
   align-items: baseline;
   gap: 40px;
-  background-image: linear-gradient(
-    to bottom,
+  /* background-image: linear-gradient(
     rgba(20, 20, 20, 0.2),
     rgba(20, 20, 20, 0.2)
-  );
+  ); */
 }
 
 .hero-title-container {
@@ -93,11 +92,12 @@ img {
     url(../images/hero-img-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: contain;
 }
 
-/* (-webkit-min-device-pixel-ratio: 2) */
-
-@media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero-fone {
     background-image: linear-gradient(
         to bottom,
@@ -173,26 +173,28 @@ img {
 @media screen and (min-width: 1280px) {
   .container {
     width: 1280px;
-    /* padding: 0px 0px 0px 100px; */
+    padding: 0px 0px 0px 100px;
   }
 
   .hero {
-    padding: 0px 0px 0px 100px;
+    padding: 0px 0px 0px 0px;
     flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: center;
-    flex-direction: row;
     gap: 28px;
   }
 
-  .qwe {
+  .hero-dt {
     width: auto;
   }
 
   .hero-title-container {
     padding: 0px 0px 50px 0px;
     gap: 128px;
-    width: 502px;
+    max-width: 502px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
   }
 
   .hero-title {
@@ -205,19 +207,28 @@ img {
   }
 
   .hero-fone {
-    min-height: 100vh;
-    width: 100%;
     background-image: linear-gradient(
         to bottom,
         rgba(20, 20, 20, 0.2),
         rgba(20, 20, 20, 0.2)
       ),
-      url(../images/hero-img-mob-1x.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
+      url(../images/hero-img-dt-1x.jpg);
+    background-position: left bottom;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
-  .hero-fone {
-    background-image: url(../images/hero-img-dt-1x.jpg);
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-fone {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(20, 20, 20, 0.2),
+          rgba(20, 20, 20, 0.2)
+        ),
+        url(../images/hero-img-dt-2x.jpg);
+    }
   }
 }
